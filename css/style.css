@@ -121,7 +121,7 @@ h1, h2, h3, h4 {
 .brand img {
   width: 48px;
   height: 48px;
-  border-radius: 10px;
+  border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
@@ -806,7 +806,7 @@ select option { background: var(--charcoal); }
   padding-bottom: 48px;
 }
 .footer-brand { max-width: 300px; }
-.footer-brand img { width: 60px; height: 60px; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4); }
+.footer-brand img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 14px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4); }
 .footer-brand h3 { font-size: 1.25rem; margin-bottom: 10px; letter-spacing: 2px; }
 .footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
 .footer-col h4 {
