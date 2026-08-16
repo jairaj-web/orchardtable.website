@@ -801,7 +801,7 @@ select option { background: var(--charcoal); }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.35fr;
   gap: 44px;
   padding-bottom: 48px;
 }
