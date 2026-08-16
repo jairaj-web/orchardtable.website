@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | Orchard Table</title>
+  <meta name="description" content="Explore the Orchard Table photo gallery — our farm, crops, happy animals, garden, nature, woodfire cooking and farm tours on Yashbans Road." />
+  <meta property="og:title" content="Photo Gallery | Orchard Table" />
+  <meta property="og:description" content="Life at Orchard Table — the farm, the food, the animals, and the garden." />
+  <meta property="og:image" content="https://orchardtable.website/assets/OC1.png" />
+  <link rel="icon" type="image/png" href="../assets/oc.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/gallery.css" />
+</head>
+<body>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous" onclick="shiftLightbox(-1)">&#10094;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Enlarged view" />
+    <button class="lightbox-arrow lightbox-next" aria-label="Next" onclick="shiftLightbox(1)">&#10095;</button>
+    <span class="lightbox-count" id="lightbox-count"></span>
+  </div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+        <span>
+          <span class="brand-name">ORCHARD TABLE</span>
+          <span class="brand-tag">Soil &middot; Soul &middot; Sustenance</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu/">Menu</a></li>
+        <li><a href="/farm/">Farm</a></li>
+        <li><a href="/gallery/" class="active">Gallery</a></li>
+        <li><a href="/bakery/"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg> Healthy Bakery</a></li>
+        <li><a href="/reserve/" class="nav-cta">Reserve Table</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section page-section--dark gallery-hero">
+      <svg class="gallery-float gallery-float--a" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="12" width="48" height="40" rx="4"/><circle cx="32" cy="32" r="9"/><path d="M8 24h6M50 24h6"/></svg>
+      <svg class="gallery-float gallery-float--b" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="16" width="52" height="34" rx="6"/><path d="M22 16l4-6h12l4 6"/><circle cx="32" cy="34" r="10"/></svg>
+      <svg class="gallery-float gallery-float--c" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M56 8C34 10 14 22 10 40c-2 10 4 14 12 12 20-3 36-22 34-44Z"/><path d="M12 50C24 34 38 22 52 12"/></svg>
+      <div class="container">
+        <p class="eyebrow anim-up">Photo Gallery</p>
+        <h1 class="section-title anim-up">Life at Orchard Table</h1>
+        <p class="section-sub anim-up">From the food forest to the woodfire kitchen — a glimpse into our urban farm sanctuary.</p>
+
+        <div class="filter-bar anim-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="farm">Farm</button>
+          <button class="filter-btn" data-filter="crops">Crops</button>
+          <button class="filter-btn" data-filter="animals">Animals</button>
+          <button class="filter-btn" data-filter="food">Food</button>
+          <button class="filter-btn" data-filter="garden">Garden</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="tours">Farm Tours</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC1.webp" data-category="farm"><img src="../assets/OC1.webp" alt="Farm" loading="lazy" /><span class="gallery-cap">Farm</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC2.webp" data-category="crops"><img src="../assets/OC2.webp" alt="Crops" loading="lazy" /><span class="gallery-cap">Crops</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC3.webp" data-category="animals"><img src="../assets/OC3.webp" alt="Animals" loading="lazy" /><span class="gallery-cap">Animals</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC4.webp" data-category="food"><img src="../assets/OC4.webp" alt="Food" loading="lazy" /><span class="gallery-cap">Food</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC5.webp" data-category="garden"><img src="../assets/OC5.webp" alt="Garden" loading="lazy" /><span class="gallery-cap">Garden</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC6.webp" data-category="nature"><img src="../assets/OC6.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC7.webp" data-category="nature"><img src="../assets/OC7.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC8.webp" data-category="nature"><img src="../assets/OC8.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC9.webp" data-category="nature"><img src="../assets/OC9.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC10.webp" data-category="nature"><img src="../assets/OC10.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC11.webp" data-category="nature"><img src="../assets/OC11.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC12.webp" data-category="nature"><img src="../assets/OC12.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC13.webp" data-category="nature"><img src="../assets/OC13.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC14.webp" data-category="nature"><img src="../assets/OC14.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC15.webp" data-category="nature"><img src="../assets/OC15.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC16.webp" data-category="nature"><img src="../assets/OC16.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC17.webp" data-category="nature"><img src="../assets/OC17.webp" alt="Nature" loading="lazy" /><span class="gallery-cap">Nature</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC18.webp" data-category="animals"><img src="../assets/OC18.webp" alt="Feeding Goats" loading="lazy" /><span class="gallery-cap">Feeding Goats</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC19.webp" data-category="tours"><img src="../assets/OC19.webp" alt="Farm Tour" loading="lazy" /><span class="gallery-cap">Farm Tour</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC20.webp" data-category="food"><img src="../assets/OC20.webp" alt="Woodfire Cooking" loading="lazy" /><span class="gallery-cap">Woodfire Cooking</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC21.webp" data-category="tours"><img src="../assets/OC21.webp" alt="Farm Tour" loading="lazy" /><span class="gallery-cap">Farm Tour</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC22.webp" data-category="tours"><img src="../assets/OC22.webp" alt="Farm Tour" loading="lazy" /><span class="gallery-cap">Farm Tour</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC23.webp" data-category="tours"><img src="../assets/OC23.webp" alt="Farm Tour" loading="lazy" /><span class="gallery-cap">Farm Tour</span></div>
+          <div class="gallery-item anim-up" data-lightbox="gallery" data-src="../assets/OC24.webp" data-category="tours"><img src="../assets/OC24.webp" alt="Farm Tour" loading="lazy" /><span class="gallery-cap">Farm Tour</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--forest cta-strip">
+      <svg class="cta-float cta-float--a" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M56 8C34 10 14 22 10 40c-2 10 4 14 12 12 20-3 36-22 34-44Z"/><path d="M12 50C24 34 38 22 52 12"/></svg>
+      <svg class="cta-float cta-float--b" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M56 8C34 10 14 22 10 40c-2 10 4 14 12 12 20-3 36-22 34-44Z"/><path d="M12 50C24 34 38 22 52 12"/></svg>
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title anim-up">See It Yourself</h2>
+        <p class="section-sub anim-up">Book a guided farm tour or reserve a table to experience it all in person.</p>
+        <div style="margin-top:10px;">
+          <a href="/reserve/" class="btn btn-gold">Book Your Visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+          <h3>ORCHARD TABLE</h3>
+          <p>A Symphony of Soil, Soul, and Sustenance. An urban farm sanctuary on Yashbans Road.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/menu/">Farm To Table Menu</a></li>
+            <li><a href="/bakery/">Healthy Bakery</a></li>
+            <li><a href="/farm/">Farm Tours &amp; Classes</a></li>
+            <li><a href="/gallery/">Photo Gallery</a></li>
+            <li><a href="https://www.instagram.com/reel/C_-Gmthv99u/?igsh=MWZtMnZydDJpZG41cw==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Farm Video</a></li>
+            <li><a href="https://www.instagram.com/reel/DUYMycHAc1c/?igsh=MWh6bzc0eDZ2OGpzaQ==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Watch Reel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="/reserve/">Reserve a Table</a></li>
+            <li><a href="https://www.swiggy.com" target="_blank" rel="noopener">Book via Swiggy</a></li>
+            <li><a href="https://district.in" target="_blank" rel="noopener">Book via District</a></li>
+            <li><a href="https://www.zomato.com" target="_blank" rel="noopener">Book via Zomato</a></li>
+            <li><a href="/reserve/">Advance Booking</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="https://share.google/NqV9ymWwD9xYGPsq0" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+919845869109"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 9845869109</a></li>
+            <li><a href="tel:+916366466599"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 6366466599</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> No 73, Whispering Greens Farmhouse, Yashbans Rd, Kothanur, Bengaluru 560077</li>
+            <li><a href="mailto:farmtotable99@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> farmtotable99@gmail.com</a></li>
+                                  </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2026 Orchard Table &middot; Soil &middot; Soul &middot; Sustenance</p>
+          <p class="footer-credit">Website designed by <strong>Digital Shalom</strong></p>
+          <p><a href="https://wa.me/916366466599" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp Us</a></p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

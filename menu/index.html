@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm To Table Menu | Orchard Table</title>
+  <meta name="description" content="Orchard Table's curated Prix Fixe dining experience — farm-to-table dishes made with organic ingredients from our on-site kitchen garden on Yashbans Road." />
+  <meta property="og:title" content="Farm To Table Menu | Orchard Table" />
+  <meta property="og:description" content="Experience our curated Prix Fixe dining experience." />
+  <meta property="og:image" content="https://orchardtable.website/assets/menu.jpg" />
+  <link rel="icon" type="image/png" href="../assets/oc.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous" onclick="shiftLightbox(-1)">&#10094;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Enlarged view" />
+    <button class="lightbox-arrow lightbox-next" aria-label="Next" onclick="shiftLightbox(1)">&#10095;</button>
+    <span class="lightbox-count" id="lightbox-count"></span>
+  </div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+        <span>
+          <span class="brand-name">ORCHARD TABLE</span>
+          <span class="brand-tag">Soil &middot; Soul &middot; Sustenance</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu/" class="active">Menu</a></li>
+        <li><a href="/farm/">Farm</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/bakery/"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg> Healthy Bakery</a></li>
+        <li><a href="/reserve/" class="nav-cta">Reserve Table</a></li>
+        <li><a href="/contact/">Contact</a></li>
+</ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section page-section--dark">
+      <div class="container">
+        <p class="eyebrow anim-up">Farm To Table Menu</p>
+        <h1 class="section-title anim-up">The Prix Fixe Experience</h1>
+        <p class="section-sub anim-up">A curated multi-course feast from our on-site kitchen garden.</p>
+
+        <div class="pf-strip anim-up-2">
+          <div class="pf-price"><span class="pf-rs">&#8377;</span>2000<span class="pf-per">/head</span></div>
+          <div class="pf-includes">
+            <span class="pf-inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 Mocktail or Cocktail</span>
+            <span class="pf-inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 2 Starters</span>
+            <span class="pf-inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 Main</span>
+            <span class="pf-inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 Dessert</span>
+          </div>
+        </div>
+
+        <div class="menu-filter-bar anim-up-2">
+          <button class="menu-filter-btn active" data-filter="all">All</button>
+          <button class="menu-filter-btn" data-filter="drinks">Drinks</button>
+          <button class="menu-filter-btn" data-filter="starters">Starters</button>
+          <button class="menu-filter-btn" data-filter="mains">Mains</button>
+          <button class="menu-filter-btn" data-filter="desserts">Desserts</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--forest">
+      <div class="container">
+        <div class="menu-card anim-up">
+          <div class="menu-card-head">
+            <img src="../assets/oc.webp" alt="Orchard Table" />
+            <h2>ORCHARD TABLE</h2>
+            <p>Prix Fixe Menu</p>
+          </div>
+
+        <div class="menu-cat anim-up" data-cat="drinks">
+          <h2 class="menu-cat-title">Drinks</h2>
+          <div class="dish-list">
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Herbal Medicinal Tea</h3>
+                <p>Curry leaf, blue pea, roselle, or rosemary — brewed from the garden.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Creamy Matcha &amp; Gin Cocktail</h3>
+                <p>Silky matcha cream meets botanical gin.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Cocktail</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Limoncello Mocktail or Cocktail</h3>
+                <p>Bright citrus, shaken slow — your call.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Cocktail</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Tender Coconut &amp; Tequila Cocktail</h3>
+                <p>Fresh tender coconut water and premium tequila.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Cocktail</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat anim-up-2" data-cat="starters">
+          <h2 class="menu-cat-title">Starters</h2>
+          <div class="dish-list">
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Garden-Fresh Turmeric Salad</h3>
+                <p>Chef's garden turmeric salad with nuts, dried fruits &amp; seeds — veg or conch/sea snail.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Tuna Maki Crudo</h3>
+                <p>Raw tuna maki, chef-crafted crudo style.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Vietnamese Rice Paper Rolls</h3>
+                <p>Fresh rolls with peanut sauce — veg, chicken, or prawns.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Mutton Kheema Vadas</h3>
+                <p>Spiced mutton kheema vadas with fiery jungle herbs chutney.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Blue Corn Quesadillas</h3>
+                <p>Blue corn quesadillas with pineapple salsa — veg or chicken.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat anim-up-3" data-cat="mains">
+          <h2 class="menu-cat-title">Mains</h2>
+          <div class="dish-list">
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Raw Jackfruit Biryani</h3>
+                <p>Slow-spiced raw jackfruit biryani, fragrant and rich.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Bacon-Wrapped Cheesy Chicken Roulade</h3>
+                <p>Golden roulade, wrapped in smoked bacon with molten cheese.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Coorg Pork Curry / Mutton Curry &amp; Sannas</h3>
+                <p>Slow-braised Kodava-style curry with soft steamed sannas.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Fish in Fig Leaf</h3>
+                <p>Fish with ayurvedic walnut pesto, wrapped in fig leaf and grilled.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Beef Tenderloin with Blue Cheese</h3>
+                <p>Pan-seared beef tenderloin finished with blue cheese.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag gold">Non-Veg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat anim-up" data-cat="desserts">
+          <h2 class="menu-cat-title">Desserts</h2>
+          <div class="dish-list">
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Matcha Tiramisu</h3>
+                <p>Earthy matcha meets classic tiramisu layers.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Khubaani Ka Meetha</h3>
+                <p>Stewed apricots with organic honey &amp; cream.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-main">
+                <h3>Burnt Basque Lemon Cheesecake</h3>
+                <p>Caramelised outside, molten inside — with a lemon twist.</p>
+              <span class="dish-leader"></span>
+              </div>
+              <span class="dish-tag veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg</span>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="/reserve/" class="btn btn-gold">Book Your Table Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--cream">
+      <div class="container">
+        <p class="eyebrow anim-up" style="color:#8BA888;">From Our Garden</p>
+        <h2 class="section-title anim-up" style="color:#1E3A2B;">Why Farm To Table?</h2>
+        <div class="feature-grid">
+          <div class="feature-card anim-up">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div>
+            <h3>On-Site Kitchen Garden</h3>
+            <p>Wholesome organic ingredients grown steps from your table.</p>
+          </div>
+          <div class="feature-card anim-up-2">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+            <h3>Curated Prix Fixe</h3>
+            <p>A carefully crafted multi-course experience that changes with the seasons.</p>
+          </div>
+          <div class="feature-card anim-up-3">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg></div>
+            <h3>True Farm Setting</h3>
+            <p>Dine amidst lush greenery, birdsong, and our happy farm animals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--forest">
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title anim-up">Hungry Already?</h2>
+        <p class="section-sub anim-up">Reserve your table — advance booking via UPI &amp; WhatsApp confirmation.</p>
+        <div style="margin-top:10px;">
+          <a href="/reserve/" class="btn btn-gold">Make a Reservation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+          <h3>ORCHARD TABLE</h3>
+          <p>A Symphony of Soil, Soul, and Sustenance. An urban farm sanctuary on Yashbans Road.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/menu/">Farm To Table Menu</a></li>
+            <li><a href="/bakery/">Healthy Bakery</a></li>
+            <li><a href="/farm/">Farm Tours &amp; Classes</a></li>
+            <li><a href="/gallery/">Photo Gallery</a></li>
+            <li><a href="https://www.instagram.com/reel/C_-Gmthv99u/?igsh=MWZtMnZydDJpZG41cw==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Farm Video</a></li>
+            <li><a href="https://www.instagram.com/reel/DUYMycHAc1c/?igsh=MWh6bzc0eDZ2OGpzaQ==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Watch Reel</a></li>
+</ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="/reserve/">Reserve a Table</a></li>
+            <li><a href="https://www.swiggy.com" target="_blank" rel="noopener">Book via Swiggy</a></li>
+            <li><a href="https://district.in" target="_blank" rel="noopener">Book via District</a></li>
+            <li><a href="https://www.zomato.com" target="_blank" rel="noopener">Book via Zomato</a></li>
+            <li><a href="/reserve/">Advance Booking</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="https://share.google/NqV9ymWwD9xYGPsq0" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a></li>
+</ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+919845869109"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 9845869109</a></li>
+            <li><a href="tel:+916366466599"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 6366466599</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> No 73, Whispering Greens Farmhouse, Yashbans Rd, Kothanur, Bengaluru 560077</li>
+            <li><a href="mailto:farmtotable99@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> farmtotable99@gmail.com</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2026 Orchard Table &middot; Soil &middot; Soul &middot; Sustenance</p>
+          <p class="footer-credit">Website designed by <strong>Digital Shalom</strong></p>
+          <p><a href="https://wa.me/916366466599" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp Us</a></p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

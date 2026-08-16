@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Gluten-Free Bakery | Orchard Table</title>
+  <meta name="description" content="Orchard Table's Gluten-Free Bread Boutique — organic, non-GMO almond, coconut & seed flours, house-milled flour and gluten-free sourdough starters. Order via WhatsApp." />
+  <meta property="og:title" content="The Gluten-Free Bread Boutique | Orchard Table" />
+  <meta property="og:description" content="All products crafted with organic, non-GMO almond, coconut, and seed flours. We mill our own flour." />
+  <meta property="og:image" content="https://orchardtable.website/assets/OC4.webp" />
+  <link rel="icon" type="image/png" href="../assets/oc.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/bakery.css" />
+</head>
+<body>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous" onclick="shiftLightbox(-1)">&#10094;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Enlarged view" />
+    <button class="lightbox-arrow lightbox-next" aria-label="Next" onclick="shiftLightbox(1)">&#10095;</button>
+    <span class="lightbox-count" id="lightbox-count"></span>
+  </div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+        <span>
+          <span class="brand-name">ORCHARD TABLE</span>
+          <span class="brand-tag">Soil &middot; Soul &middot; Sustenance</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu/">Menu</a></li>
+        <li><a href="/farm/">Farm</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/bakery/" class="active"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg> Healthy Bakery</a></li>
+        <li><a href="/reserve/" class="nav-cta">Reserve Table</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section page-section--dark bakery-hero">
+      <svg class="bk-float bk-float--wheat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V8"/><path d="M12 8c-2 0-3.5-1.5-3.5-3.5S10 1 12 1s3.5 1.5 3.5 3.5S14 8 12 8Z"/><path d="M9 12c-2 0-3.5-1.5-3.5-3.5S7 5 9 5s3.5 1.5 3.5 3.5S11 12 9 12Z"/><path d="M15 12c2 0 3.5-1.5 3.5-3.5S17 5 15 5s-3.5 1.5-3.5 3.5S13 12 15 12Z"/><path d="M12 16c-2.2 0-4-1.8-4-4 2.2 0 4 1.8 4 4Z"/></svg>
+      <svg class="bk-float bk-float--cookie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 9v.01"/><path d="M15 8v.01"/><path d="M9.5 15v.01"/><path d="M15 13.5v.01"/><path d="M5.5 13v.01"/></svg>
+      <svg class="bk-float bk-float--sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.6 4.8 2.6 8.4 5.8 10-3.2 1.6-5.2 5.2-5.8 10-.6-4.8-2.6-8.4-5.8-10 3.2-1.6 5.2-5.2 5.8-10Z"/></svg>
+      <div class="container">
+        <p class="eyebrow anim-up">The Gluten-Free Bread Boutique</p>
+        <h1 class="section-title anim-up">Baked With Love, Milled By Hand</h1>
+        <div class="philosophy-note anim-up">
+          <p>Everything here is made with <strong>organic, non-GMO almond, coconut &amp; seed flours</strong> — and much of our fruit, vegetables &amp; herbs are grown right on our farm. All-natural &amp; preservative-free: we mill our flour ourselves, build our own <strong>gluten-free sourdough starters</strong>, and sweeten only with coconut sugar, jaggery &amp; coconut oil — never processed sugars or fats.</p>
+        </div>
+
+        <div class="card anim-up bk-order-wrap" style="max-width:640px;margin:0 auto;">
+          <svg class="bk-order-wheat bk-order-wheat--l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V8"/><path d="M12 8c-2 0-3.5-1.5-3.5-3.5S10 1 12 1s3.5 1.5 3.5 3.5S14 8 12 8Z"/><path d="M9 12c-2 0-3.5-1.5-3.5-3.5S7 5 9 5s3.5 1.5 3.5 3.5S11 12 9 12Z"/><path d="M15 12c2 0 3.5-1.5 3.5-3.5S17 5 15 5s-3.5 1.5-3.5 3.5S13 12 15 12Z"/></svg>
+          <svg class="bk-order-wheat bk-order-wheat--r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V8"/><path d="M12 8c-2 0-3.5-1.5-3.5-3.5S10 1 12 1s3.5 1.5 3.5 3.5S14 8 12 8Z"/><path d="M9 12c-2 0-3.5-1.5-3.5-3.5S7 5 9 5s3.5 1.5 3.5 3.5S11 12 9 12Z"/><path d="M15 12c2 0 3.5-1.5 3.5-3.5S17 5 15 5s-3.5 1.5-3.5 3.5S13 12 15 12Z"/></svg>
+          <label for="bakeryOrder">Type your order or inquiry below:</label>
+          <textarea id="bakeryOrder" placeholder="List the items you would like to order or ask about..."></textarea>
+          <button class="btn btn-whatsapp btn-block" style="margin-top:14px;" onclick="sendBakeryWhatsApp()">Order via WhatsApp <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="bk-marquee" role="presentation">
+      <div class="bk-marquee-track">
+        <span class="bk-marquee-text">FRESH FROM THE OVEN &bull; BAKED DAILY ON THE FARM &bull; NO PRESERVATIVES &bull; WHOLE WHEAT &amp; JAGGERY &bull; </span>
+        <span class="bk-marquee-text" aria-hidden="true">FRESH FROM THE OVEN &bull; BAKED DAILY ON THE FARM &bull; NO PRESERVATIVES &bull; WHOLE WHEAT &amp; JAGGERY &bull; </span>
+      </div>
+    </div>
+
+    <section class="page-section page-section--dark bk-products-section">
+      <div class="container">
+        <p class="eyebrow anim-up" style="color:#D4AF37;">Baked Daily, Priced Clearly</p>
+        <h2 class="section-title anim-up">The Full Menu</h2>
+
+        <div class="bk-tabs anim-up" role="tablist" aria-label="Bakery menu categories">
+          <button class="bk-tab-btn is-active" role="tab" aria-selected="true" data-tab="tab-breads">Breads &amp; Sourdough</button>
+          <button class="bk-tab-btn" role="tab" aria-selected="false" data-tab="tab-cakes">Cakes &amp; Desserts</button>
+          <button class="bk-tab-btn" role="tab" aria-selected="false" data-tab="tab-snacks">Snacks &amp; Energy</button>
+          <button class="bk-tab-btn" role="tab" aria-selected="false" data-tab="tab-flours">Flours &amp; Pantry</button>
+          <button class="bk-tab-btn" role="tab" aria-selected="false" data-tab="tab-spreads">Spreads &amp; Condiments</button>
+        </div>
+
+        <div class="bk-tab-panels">
+          <section class="bk-tab-panel is-active" id="tab-breads" role="tabpanel">
+            <div class="bk-menu-note">Flavored breads come as <strong>small loaf Rs 300</strong>, <strong>large loaf Rs 600</strong> or <strong>per dozen rolls Rs 750</strong>.</div>
+            <ul class="bk-flavor-list">
+              <li>Spinach</li><li>Millet</li><li>Quinoa</li><li>Moringa</li><li>Jackfruit Seed</li><li>Sundried Tomato &amp; Goat Cheese</li><li>Guacamole Avocado</li><li>Banana &amp; Choc Chip</li><li>Pumpkin Choc Chip</li><li>Cinnamon Raisin</li><li>Blueberry</li><li>Charcoal Detox</li><li>Seed &amp; Nut</li><li>Rum &amp; Raisin</li><li>Carrot &amp; Cheese</li><li>Chocolate Cherry</li>
+            </ul>
+            <div class="bk-menu-list">
+              <div class="bk-item"><div class="bk-item-info"><h4>Plain Sandwich Loaf</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Keto Bread</h4><span class="bk-tag">Keto</span></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Garlic Cheese Bread</h4></div><span class="bk-item-price">Rs 600</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Baguette</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 600</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Gluten-Free Millet Sourdough</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 600</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Focaccia &mdash; Plain</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 600 / 6</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Focaccia &mdash; Chilli Garlic</h4></div><span class="bk-item-price">Rs 750 / 6</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Focaccia &mdash; Sundried Tomato &amp; Goat Cheese</h4></div><span class="bk-item-price">Rs 750 / 6</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Pizza Crust / Base</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 600 / 4</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Burger Buns</h4></div><span class="bk-item-price">Rs 600 / 4</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Corn Tortillas</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 600 / 10</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Stuffed Bread</h4><span class="bk-tag">Corn &amp; Cheese</span><span class="bk-tag">Chicken Mince</span><span class="bk-tag">Pepper Pork Sausage</span><span class="bk-tag">Tuna</span></div><span class="bk-item-price">Rs 750 / dozen</span></div>
+            </div>
+          </section>
+
+          <section class="bk-tab-panel" id="tab-cakes" role="tabpanel">
+            <div class="bk-menu-note">Celebration cakes in flavors like <strong>Vanilla &amp; Choc Chip</strong>, <strong>Peanut Butter Chocolate</strong>, <strong>Beetroot Chocolate</strong>, Blueberry, Pineapple, Chocolate Fudge, Carrot Walnut, Apple &amp; Cinnamon, Red Velvet, Banana Choc Chip, Beetroot Spirulina &amp; Banana, Orange &amp; Choc Chip, Rum &amp; Chocolate, Pumpkin &amp; Choc Chip.</div>
+            <div class="bk-menu-list">
+              <div class="bk-item"><div class="bk-item-info"><h4>Celebration Cakes</h4></div><span class="bk-item-price">Rs 1500 / 400g</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Brownies</h4></div><span class="bk-item-price">Rs 1250 / 6</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Red Velvet Brownies</h4></div><span class="bk-item-price">Rs 1250 / 6</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Almond Torte</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 2500 / 800g</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Decorated Birthday Cakes</h4><span class="bk-tag">Vodka &amp; Lemon Curd</span><span class="bk-tag">Rum &amp; Chocolate</span><span class="bk-tag">Pineapple &amp; Tequila</span></div><span class="bk-item-price">Rs 3000</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Muffins / Cupcakes</h4><span class="bk-tag">Same flavors as cakes</span></div><span class="bk-item-price">Rs 1250 / dozen</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Biscotti</h4><span class="bk-tag">Almond Choc Chip</span><span class="bk-tag">Blueberry</span><span class="bk-tag">Cinnamon Raisin</span><span class="bk-tag">Banana Choc Chip</span></div><span class="bk-item-price">Rs 1000 / pack</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Apple Pie Squares / Pumpkin Choc Chip Oat Bars</h4></div><span class="bk-item-price">Rs 1500 / 8</span></div>
+            </div>
+          </section>
+
+          <section class="bk-tab-panel" id="tab-snacks" role="tabpanel">
+            <div class="bk-menu-list">
+              <div class="bk-item"><div class="bk-item-info"><h4>Power Seed Crackers</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 1000</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Keto Crackers</h4><span class="bk-tag">Keto</span></div><span class="bk-item-price">Rs 1000</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Cookies</h4><span class="bk-tag">Vegan: Millet Coffee, Millet Mango</span><span class="bk-tag">Eggs: Red Velvet, Chocolate Fudge, Chocolate Almond, Ghee Nankhatai, Vanilla Choc Chip, Oatmeal</span></div><span class="bk-item-price">Rs 750 / dozen</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Millet Date Laddoos</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 800</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Makhana Amaranth Nut Bars</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 800</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Dates, Nuts &amp; Seeds Snack Bars</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 800</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Gluten-Free Granola</h4><span class="bk-tag">Steel-cut oats, seeds, fruit &amp; nuts</span></div><span class="bk-item-price">Rs 1000 / pack</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Granola Bars</h4></div><span class="bk-item-price">Rs 1250 / pack</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Artisan Mini Pizzas</h4><span class="bk-tag">GF sourdough crust</span><span class="bk-tag">Homegrown heirloom tomatoes</span><span class="bk-tag">Mixed Veg &amp; Edible Flowers / Tuna / Chicken / Pork Sausage</span></div><span class="bk-item-price">Rs 1250 / 6</span></div>
+            </div>
+          </section>
+
+          <section class="bk-tab-panel" id="tab-flours" role="tabpanel">
+            <div class="bk-menu-note">Jams are made from whatever we harvest seasonally &mdash; ask for today&rsquo;s flavors.</div>
+            <div class="bk-menu-list">
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Pancake &amp; Waffle Flour</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Cake Flour</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Roti &amp; Tortilla Flour</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Moringa Millet Chapati Flour</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Millet Instant Idli Mix</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>GF Jowar Rava</h4></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Organic Medicinal Tea Blends</h4><span class="bk-tag">Mango leaf, guava leaf, mulberry, mimosa, lemongrass, gotu kola, rosemary, thyme, coffee leaf, edible flowers</span></div><span class="bk-item-price">Rs 500 / pack</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Jams &amp; Preserves</h4><span class="bk-tag">Mango</span><span class="bk-tag">Passionfruit</span><span class="bk-tag">Jackfruit</span><span class="bk-tag">Roselle</span><span class="bk-tag">Gooseberry</span><span class="bk-tag">Jamun</span></div><span class="bk-item-price">Rs 500</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Farm Produce</h4><span class="bk-tag">Mangoes, chikkoos, forest amla, star gooseberry, pumpkin, jackfruit, beans, starfruit, moringa, passionfruit, bamboo shoots</span></div><span class="bk-item-price">Rs 300&ndash;1000 / kg</span></div>
+            </div>
+          </section>
+
+          <section class="bk-tab-panel" id="tab-spreads" role="tabpanel">
+            <div class="bk-menu-list">
+              <div class="bk-item"><div class="bk-item-info"><h4>Pure Almond Butter</h4><span class="bk-tag">Unsweetened</span></div><span class="bk-item-price">Rs 750</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Pure Peanut Butter</h4><span class="bk-tag">Unsweetened</span></div><span class="bk-item-price">Rs 750</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Pure Walnut Butter</h4><span class="bk-tag">Unsweetened</span></div><span class="bk-item-price">Rs 1000</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Ayurvedic Pesto</h4><span class="bk-tag">Brahmi, basil flowers, moringa, mango &amp; guava leaves, pomegranate leaves, assorted nuts</span></div><span class="bk-item-price">Rs 750 / jar</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Organic Spreads &amp; Sauces</h4><span class="bk-tag">Caramel</span><span class="bk-tag">Bacon &amp; Caramelised Onion Jam</span><span class="bk-tag">Lemon Curd</span><span class="bk-tag">Pizza &amp; Pasta Sauce</span><span class="bk-tag">Mustard Mayo</span><span class="bk-tag">Salad Dressings</span><span class="bk-tag">Cherry Cream Cheese</span></div><span class="bk-item-price">Rs 500 / jar</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Homemade Organic Goat Cheese</h4></div><span class="bk-item-price">Rs 800 / jar</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Kombucha &amp; Kefir Milk</h4><span class="bk-tag">Probiotic</span></div><span class="bk-item-price">Rs 300 / 200ml</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Vegan Kimchi</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 1000 / kg</span></div>
+              <div class="bk-item"><div class="bk-item-info"><h4>Walnut &amp; Sunflower Seed Cheese Spread</h4><span class="bk-tag">Vegan</span></div><span class="bk-item-price">Rs 1000</span></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <svg class="bk-divider" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32c240 32 480-32 720 0s480 32 720 0v32H0Z" fill="#D4AF37"/></svg>
+
+    <section class="page-section page-section--cream">
+      <div class="container">
+        <p class="eyebrow anim-up" style="color:#8BA888;">Why Choose Us</p>
+        <h2 class="section-title anim-up" style="color:#1E3A2B;">Bread That Cares Back</h2>
+        <div class="feature-grid">
+          <div class="feature-card anim-up">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg></div>
+            <h3>Organic &amp; Non-GMO</h3>
+            <p>Almond, coconut, and seed flours — nothing synthetic, nothing hidden.</p>
+          </div>
+          <div class="feature-card anim-up-2">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg></div>
+            <h3>House-Milled Flour</h3>
+            <p>We mill our own flour in-house for freshness you can taste.</p>
+          </div>
+          <div class="feature-card anim-up-3">
+            <div class="feature-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg></div>
+            <h3>House Sourdough Starters</h3>
+            <p>Gluten-free sourdough starters made on-site for slow-fermented goodness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <svg class="bk-divider" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32c240 32 480-32 720 0s480 32 720 0v32H0Z" fill="#D4AF37"/></svg>
+
+    <section class="page-section page-section--forest">
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title anim-up">Taste the Boutique</h2>
+        <p class="section-sub anim-up">Place your order via WhatsApp, or visit us at the farm.</p>
+        <div style="margin-top:10px;">
+          <a href="/contact/" class="btn btn-outline">Find Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/oc.webp" alt="Orchard Table Logo" />
+          <h3>ORCHARD TABLE</h3>
+          <p>A Symphony of Soil, Soul, and Sustenance. An urban farm sanctuary on Yashbans Road.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/menu/">Farm To Table Menu</a></li>
+            <li><a href="/bakery/">Healthy Bakery</a></li>
+            <li><a href="/farm/">Farm Tours &amp; Classes</a></li>
+            <li><a href="/gallery/">Photo Gallery</a></li>
+            <li><a href="https://www.instagram.com/reel/C_-Gmthv99u/?igsh=MWZtMnZydDJpZG41cw==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Farm Video</a></li>
+            <li><a href="https://www.instagram.com/reel/DUYMycHAc1c/?igsh=MWh6bzc0eDZ2OGpzaQ==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Watch Reel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="/reserve/">Reserve a Table</a></li>
+            <li><a href="https://www.swiggy.com" target="_blank" rel="noopener">Book via Swiggy</a></li>
+            <li><a href="https://district.in" target="_blank" rel="noopener">Book via District</a></li>
+            <li><a href="https://www.zomato.com" target="_blank" rel="noopener">Book via Zomato</a></li>
+            <li><a href="/reserve/">Advance Booking</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="https://share.google/NqV9ymWwD9xYGPsq0" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+919845869109"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 9845869109</a></li>
+            <li><a href="tel:+916366466599"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 6366466599</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> No 73, Whispering Greens Farmhouse, Yashbans Rd, Kothanur, Bengaluru 560077</li>
+            <li><a href="mailto:farmtotable99@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> farmtotable99@gmail.com</a></li>
+                                  </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2026 Orchard Table &middot; Soil &middot; Soul &middot; Sustenance</p>
+          <p class="footer-credit">Website designed by <strong>Digital Shalom</strong></p>
+          <p><a href="https://wa.me/916366466599" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp Us</a></p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script>
+    document.querySelectorAll(".bk-tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".bk-tab-btn").forEach((b) => {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".bk-tab-panel").forEach((p) => p.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-selected", "true");
+        document.getElementById(btn.dataset.tab).classList.add("is-active");
+      });
+    });
+  </script>
+</body>
+</html>

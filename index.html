@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orchard Table | Urban Farm Experience — Yashbans Road</title>
+  <meta name="description" content="Orchard Table — an urban farm sanctuary on Yashbans Road. Farm-to-table Prix Fixe dining, gluten-free bread boutique, farm tours & cooking classes. Reserve your table today." />
+  <meta property="og:title" content="Orchard Table | Farm Experience" />
+  <meta property="og:description" content="A Symphony of Soil, Soul, and Sustenance. Urban farm dining, gluten-free bakery, farm tours & cooking classes on Yashbans Road." />
+  <meta property="og:image" content="https://orchardtable.website/assets/OC4.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/oc.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/OC1.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Orchard Table",
+    "slogan": "A Symphony of Soil, Soul, and Sustenance",
+    "description": "Urban farm sanctuary on Yashbans Road offering farm-to-table Prix Fixe dining, a gluten-free bread boutique, farm tours and cooking classes.",
+    "image": "https://orchardtable.website/assets/OC4.png",
+    "telephone": "+916366466599",
+    "email": "farmtotable99@gmail.com",
+    "servesCuisine": ["Farm-to-table", "Kodava", "Gluten-free", "Vegan Ayurvedic", "Global"],
+    "priceRange": "₹₹",
+    "acceptsReservations": "True",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Yashbans Road, Urban Farm Sanctuary",
+      "addressCountry": "IN"
+    },
+    "hasMenu": "https://orchardtable.website/menu.html",
+    "sameAs": ["https://www.instagram.com/orchardtable/"]
+  }
+  </script>
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous" onclick="shiftLightbox(-1)">&#10094;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Enlarged view" />
+    <button class="lightbox-arrow lightbox-next" aria-label="Next" onclick="shiftLightbox(1)">&#10095;</button>
+    <span class="lightbox-count" id="lightbox-count"></span>
+  </div>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="assets/oc.webp" alt="Orchard Table Logo" />
+        <span>
+          <span class="brand-name">ORCHARD TABLE</span>
+          <span class="brand-tag">Soil &middot; Soul &middot; Sustenance</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+      <button class="nav-close" aria-label="Close menu">&times;</button>
+
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/menu/">Menu</a></li>
+        <li><a href="/farm/">Farm</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/bakery/"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.97 16.03A4.5 4.5 0 0 0 7 19l3 3"/><path d="M16 8 14.47 6.47a3.5 3.5 0 0 1 0-4.94L16 0"/></svg> Healthy Bakery</a></li>
+        <li><a href="/reserve/" class="nav-cta">Reserve Table</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+<section class="hero">
+      <img class="hero-bg" src="assets/OC1.webp" alt="Orchard Table farm" />
+      <div class="hero-content">
+        <span class="hero-eyebrow">Urban Farm Sanctuary &middot; Kothanur, Bengaluru</span>
+        <img class="hero-logo" src="assets/oc.webp" alt="Orchard Table Logo" />
+        <h1 class="hero-title">ORCHARD TABLE</h1>
+        <p class="hero-tagline">A Symphony of <em>Soil</em>, <em>Soul</em>, and <em>Sustenance</em></p>
+        <div class="hero-btns">
+          <a href="/reserve/" class="btn btn-gold">Book Your Table</a>
+          <a href="/menu/" class="btn btn-glass">Explore the Menu</a>
+        </div>
+      </div>
+      <div class="hero-chip hero-chip--left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+        Farm-to-Table Dining
+      </div>
+      <div class="hero-chip hero-chip--right">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Kids &amp; Family Friendly
+      </div>
+      <div class="hero-scroll">
+        <span class="hero-scroll-line"></span>
+        Scroll
+      </div>
+      <svg class="hero-float hero-float--wheat" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22V8"/><path d="M12 8c-2.2 0-3.5-1.6-3-3.4 2.2 0 3.5 1.6 3 3.4z"/><path d="M12 8c2.2 0 3.5-1.6 3-3.4-2.2 0-3.5 1.6-3 3.4z"/><path d="M12 12c-2.2 0-3.5-1.6-3-3.4 2.2 0 3.5 1.6 3 3.4z"/><path d="M12 12c2.2 0 3.5-1.6 3-3.4-2.2 0-3.5 1.6-3 3.4z"/><path d="M12 16c-2.2 0-3.5-1.6-3-3.4 2.2 0 3.5 1.6 3 3.4z"/><path d="M12 16c2.2 0 3.5-1.6 3-3.4-2.2 0-3.5 1.6-3 3.4z"/></svg>
+      <svg class="hero-float hero-float--leaf" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21c-5-1-8-5-8-11C9 9 13 8 20 10c-2 7-4 10-8 11z"/><path d="M12 21c1-6 4-9 8-11"/></svg>
+      <svg class="hero-float hero-float--spark" viewBox="0 0 24 24" fill="#D4AF37" stroke="none" aria-hidden="true" focusable="false"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/></svg>
+      <svg class="hero-wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,36 C240,12 480,52 720,36 C960,20 1200,48 1440,32 L1440,48 L0,48 Z" fill="#D4AF37" opacity="0.15"/><path d="M0,36 C240,12 480,52 720,36 C960,20 1200,48 1440,32" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.3"/></svg>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <span><strong>5.0</strong> &middot; 23 Google Reviews</span>
+      </div>
+      <span class="trust-divider"></span>
+      <div class="trust-item">Also on <a href="https://www.swiggy.com" target="_blank" rel="noopener">Swiggy</a> &middot; <a href="https://district.in" target="_blank" rel="noopener">District</a> &middot; <a href="https://www.zomato.com" target="_blank" rel="noopener">Zomato</a></div>
+    </div>
+
+    <!-- ===== About ===== -->
+    <section class="page-section page-section--forest">
+      <div class="container">
+        <p class="eyebrow anim-up">From Orchard Table</p>
+        <h2 class="section-title anim-up">A Culinary Oasis in the City</h2>
+        <div class="about-grid">
+          <div class="about-img anim-up-2">
+            <img src="assets/OC5.webp" alt="Kitchen garden at Orchard Table" />
+          </div>
+          <div class="about-text anim-up-3">
+            <p>Nestled amidst lush greenery and birdsong on Yashbans Road, <strong>ORCHARD TABLE</strong> invites you to indulge in a culinary oasis that brings together wholesome organic ingredients from our on-site kitchen garden.</p>
+            <p>As you step into this urban farm, serenity engulfs your senses, creating an escape from the bustling city life. Savor the delectable flavors of meticulously crafted dishes while your children connect with nature, visit our happy farm animals &amp; enjoy the outdoors.</p>
+            <a href="https://www.instagram.com/reel/C_-Gmthv99u/?igsh=MWZtMnZydDJpZG41cw==" target="_blank" rel="noopener" class="btn btn-instagram">Watch Farm Experience Video <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Highlights ===== -->
+    <section class="page-section page-section--forest">
+      <div class="container">
+        <p class="eyebrow anim-up">What We Offer</p>
+        <h2 class="section-title anim-up">Experience the Orchard Table</h2>
+        <p class="section-sub anim-up">Farm-to-table dining, artisan gluten-free baking, and true farm experiences — all under one canopy.</p>
+        <div class="spot-grid">
+          <div class="spot-card anim-up">
+            <div class="spot-img"><img src="assets/OC4.webp" alt="Farm to table food" loading="lazy" /><span class="spot-chip">Dining</span></div>
+            <div class="spot-body">
+              <h3>Farm To Table Dining</h3>
+              <p>Experience our curated Prix Fixe dining experience — wholesome organic ingredients, straight from our kitchen garden.</p>
+              <a href="/menu/" class="spot-link">View the Menu &rarr;</a>
+            </div>
+          </div>
+          <div class="spot-card anim-up-2">
+            <div class="spot-img"><img src="assets/2.webp" alt="Gluten-free breads" loading="lazy" /><span class="spot-chip">Bakery</span></div>
+            <div class="spot-body">
+              <h3>Gluten-Free Bread Boutique</h3>
+              <p>Organic, non-GMO almond, coconut &amp; seed flours. We mill our own flour and use house-made gluten-free sourdough starters.</p>
+              <a href="/bakery/" class="spot-link">Visit the Boutique &rarr;</a>
+            </div>
+          </div>
+          <div class="spot-card anim-up-3">
+            <div class="spot-img"><img src="assets/OC18.webp" alt="Feeding farm animals" loading="lazy" /><span class="spot-chip">Farm Tours</span></div>
+            <div class="spot-body">
+              <h3>Farm Tours &amp; Classes</h3>
+              <p>Walk our permaculture food forest, meet our resident animals, and learn gluten-free baking, Kodava cuisine &amp; more.</p>
+              <a href="/farm/" class="spot-link">Explore the Farm &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery preview ===== -->
+    <section class="page-section page-section--dark">
+      <div class="container">
+        <p class="eyebrow anim-up">Moments</p>
+        <h2 class="section-title anim-up">Life at Orchard Table</h2>
+        <p class="section-sub anim-up">A glimpse of the garden, the animals, and the woodfire kitchen.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC1.webp" data-category="farm"><img src="assets/OC1.webp" alt="Farm" loading="lazy" /><span class="gallery-cap">Farm</span></div>
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC2.webp" data-category="crops"><img src="assets/OC2.webp" alt="Crops" loading="lazy" /><span class="gallery-cap">Crops</span></div>
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC3.webp" data-category="animals"><img src="assets/OC3.webp" alt="Animals" loading="lazy" /><span class="gallery-cap">Animals</span></div>
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC4.webp" data-category="food"><img src="assets/OC4.webp" alt="Food" loading="lazy" /><span class="gallery-cap">Food</span></div>
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC18.webp" data-category="animals"><img src="assets/OC18.webp" alt="Feeding Goats" loading="lazy" /><span class="gallery-cap">Feeding Goats</span></div>
+          <div class="gallery-item anim-up" data-lightbox="home-gallery" data-src="assets/OC20.webp" data-category="food"><img src="assets/OC20.webp" alt="Woodfire Cooking" loading="lazy" /><span class="gallery-cap">Woodfire Cooking</span></div>
+        </div>
+        <div style="text-align:center;margin-top:36px;">
+          <a href="/gallery/" class="btn btn-outline">View Full Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="page-section page-section--dark">
+      <div class="container">
+        <p class="eyebrow anim-up">Guest Love</p>
+        <h2 class="section-title anim-up">Real Reviews from Our Guests</h2>
+        <p class="section-sub anim-up">Rated 5.0 on Google by 23 guests — here's what they say.</p>
+
+        <div class="reviews-grid">
+          <article class="review-card anim-up">
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"We had made a reservation for our anniversary dinner, and the host made sure to make it special. The service was catered to us."</p>
+            <div class="review-who">
+              <div class="review-avatar">A</div>
+              <div>
+                <div class="review-name">Ayushi Jain</div>
+                <div class="review-meta">5 months ago &middot; Google review</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card anim-up-2">
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"We arrived at 1pm with two six year olds who never wanted to leave. This site gets only five stars."</p>
+            <div class="review-who">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">Des Coutinho</div>
+                <div class="review-meta">7 months ago &middot; Google Local Guide</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card anim-up-3">
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"We stumbled upon this hidden gem. The space is very private — like an estate in Coorg, not Bangalore. The food is heavenly."</p>
+            <div class="review-who">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">Darshan M</div>
+                <div class="review-meta">a year ago &middot; Google Local Guide</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card anim-up">
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"An amazing atmosphere and great service. They were very happy to serve us vegan options — the chocolate beetroot cake is delicious."</p>
+            <div class="review-who">
+              <div class="review-avatar">E</div>
+              <div>
+                <div class="review-name">Elliot Byrne</div>
+                <div class="review-meta">a year ago &middot; Google Local Guide</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card anim-up-2">
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Dining at its finest! Exceptional service and cuisine — farm-to-table at its best. An unforgettable experience."</p>
+            <div class="review-who">
+              <div class="review-avatar">S</div>
+              <div>
+                <div class="review-name">Sharaschandra Sn</div>
+                <div class="review-meta">a year ago &middot; Google Local Guide</div>
+              </div>
+            </div>
+          </article>
+
+          </div>
+
+        <div class="review-all anim-up">
+          <a href="https://share.google/sVKg1XVO8PhkUYi5J" target="_blank" rel="noopener" class="btn btn-outline">See All Reviews on Google</a>
+        </div>
+      </div>
+      <svg class="section-wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,36 C240,12 480,52 720,36 C960,20 1200,48 1440,32 L1440,48 L0,48 Z" fill="#D4AF37" opacity="0.15"/><path d="M0,36 C240,12 480,52 720,36 C960,20 1200,48 1440,32" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.3"/></svg>
+    </section>
+
+    <!-- ===== CTA / Booking ===== -->
+    <section class="page-section page-section--forest cta-section">
+      <svg class="cta-leaf cta-leaf--1" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21c-5-1-8-5-8-11C9 9 13 8 20 10c-2 7-4 10-8 11z"/><path d="M12 21c1-6 4-9 8-11"/></svg>
+      <svg class="cta-leaf cta-leaf--2" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21c-5-1-8-5-8-11C9 9 13 8 20 10c-2 7-4 10-8 11z"/><path d="M12 21c1-6 4-9 8-11"/></svg>
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title anim-up">Reserve Your Table</h2>
+        <p class="section-sub anim-up">Secure your spot — advance booking via UPI &amp; WhatsApp confirmation.</p>
+        <div style="margin-top:10px;">
+          <a href="/reserve/" class="btn btn-gold cta-glow">Make a Reservation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/oc.webp" alt="Orchard Table Logo" />
+          <h3>ORCHARD TABLE</h3>
+          <p>A Symphony of Soil, Soul, and Sustenance. An urban farm sanctuary on Yashbans Road.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/menu/">Farm To Table Menu</a></li>
+            <li><a href="/bakery/">Healthy Bakery</a></li>
+            <li><a href="/farm/">Farm Tours &amp; Classes</a></li>
+            <li><a href="/gallery/">Photo Gallery</a></li>
+            <li><a href="https://www.instagram.com/reel/C_-Gmthv99u/?igsh=MWZtMnZydDJpZG41cw==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Farm Video</a></li>
+            <li><a href="https://www.instagram.com/reel/DUYMycHAc1c/?igsh=MWh6bzc0eDZ2OGpzaQ==" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Watch Reel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="/reserve/">Reserve a Table</a></li>
+            <li><a href="https://www.swiggy.com" target="_blank" rel="noopener">Book via Swiggy</a></li>
+            <li><a href="https://district.in" target="_blank" rel="noopener">Book via District</a></li>
+            <li><a href="https://www.zomato.com" target="_blank" rel="noopener">Book via Zomato</a></li>
+            <li><a href="/reserve/">Advance Booking</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="https://share.google/NqV9ymWwD9xYGPsq0" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+919845869109"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 9845869109</a></li>
+            <li><a href="tel:+916366466599"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 6366466599</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> No 73, Whispering Greens Farmhouse, Yashbans Rd, Kothanur, Bengaluru 560077</li>
+            <li><a href="mailto:farmtotable99@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> farmtotable99@gmail.com</a></li>
+                                  </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2026 Orchard Table &middot; Soil &middot; Soul &middot; Sustenance</p>
+          <p class="footer-credit">Website designed by <strong>Digital Shalom</strong></p>
+          <p><a href="https://wa.me/916366466599" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp Us</a></p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    (function () {
+      var bar = document.getElementById('scroll-progress');
+      if (!bar) return;
+      var ticking = false;
+      function update() {
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var y = window.scrollY || doc.scrollTop || 0;
+        bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, Math.max(0, y / max)) : 0) + ')';
+        ticking = false;
+      }
+      function request() {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+      }
+      window.addEventListener('scroll', request, { passive: true });
+      window.addEventListener('resize', request);
+      update();
+    })();
+  </script>
+</body>
+</html>
