@@ -286,7 +286,7 @@ function submitClassBooking(e) {
   ];
   if (emailVal) lines.push(`*Email:* ${emailVal}`);
   const text = encodeURIComponent(lines.join("\n"));
-  window.open(`https://wa.me/${OWNER_WA}?text=${text}`, "_blank");
+  window.location.href = `https://wa.me/${OWNER_WA}?text=${text}`;
   const form = document.getElementById("class-form");
   const success = document.getElementById("class-success");
   if (form) form.hidden = true;
