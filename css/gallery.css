@@ -98,14 +98,7 @@
   box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.18);
 }
 
-.gallery-item:nth-child(3n) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gallery-item:nth-child(4n) {
-  grid-column: span 2;
-}
+/* All tiles uniform size */
 
 /* ---------- Jewelry-like hover polish ---------- */
 .gallery-item img {
@@ -195,9 +188,7 @@
   .gallery-float--c { width: 36px; height: 36px; }
   .cta-float { width: 30px; height: 30px; opacity: 0.15; }
   .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-item,
-  .gallery-item:nth-child(3n),
-  .gallery-item:nth-child(4n) {
+  .gallery-item {
     grid-column: auto;
     grid-row: auto;
   }
