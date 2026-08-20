@@ -393,6 +393,8 @@ h1, h2, h3, h4 {
 .btn-gold { background: var(--gold); color: var(--charcoal); box-shadow: var(--shadow-gold); }
 .btn-gold:hover { background: #e6c24a; transform: translateY(-2px); }
 .btn-outline { background: transparent; color: var(--text-light); border: 2px solid var(--gold); }
+.page-section--cream .btn-outline { color: var(--forest); }
+.page-section--cream .btn-outline:hover { color: var(--charcoal); }
 .btn-outline:hover { background: var(--gold); color: var(--charcoal); transform: translateY(-2px); }
 .btn-instagram {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
