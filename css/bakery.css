@@ -219,8 +219,11 @@
   .bk-tab-btn { min-height: 44px; padding: 8px 15px; font-size: 0.78rem; }
   .bk-item { flex-direction: column; align-items: flex-start; gap: 8px; }
   .bk-item-price { align-self: flex-end; }
-  .bk-item-right { align-self: flex-end; flex-wrap: wrap; justify-content: flex-end; }
+  .bk-item-right { width: 100%; align-self: stretch; margin-left: 0; justify-content: space-between; align-items: center; flex-wrap: nowrap; }
   .bk-item-info { width: 100%; }
+  .order-box { flex: 1 1 auto; justify-content: flex-end; }
+  .qty-btn { width: 38px; height: 38px; font-size: 1.25rem; }
+  .qty-val { min-width: 30px; font-size: 1.05rem; }
 }
 
 /* ---------- Reduced motion ---------- */
