@@ -22,7 +22,8 @@
 /* ---------- Hero logo sparkle entrance ---------- */
 .hero-logo-wrap {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: fit-content;
   margin: 0 auto 22px;
   animation: heroUp 0.9s ease both;
   animation-delay: 0.2s;
