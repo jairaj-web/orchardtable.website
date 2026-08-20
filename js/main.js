@@ -64,6 +64,80 @@ document.querySelectorAll(".menu-filter-bar").forEach((bar) => {
   });
 });
 
+/* ---------- Order steppers (menu + bakery pages) ---------- */
+(function initOrderSteppers() {
+  const rows = document.querySelectorAll(".dish-row, .bk-item");
+  if (!rows.length) return;
+
+  const sel = (r, s) => r.querySelector(s);
+
+  rows.forEach((row) => {
+    row.dataset.qty = "0";
+    const box = document.createElement("div");
+    box.className = "order-box";
+    box.innerHTML =
+      '<button class="qty-btn qty-minus" type="button" aria-label="Decrease quantity">&#8722;</button>' +
+      '<span class="qty-val">0</span>' +
+      '<button class="qty-btn qty-plus" type="button" aria-label="Increase quantity">+</button>' +
+      '<button class="order-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Order Now</button>';
+    row.appendChild(box);
+
+    const val = sel(box, ".qty-val");
+    const minus = sel(box, ".qty-minus");
+    const plus = sel(box, ".qty-plus");
+    const order = sel(box, ".order-btn");
+    const qty = () => parseInt(row.dataset.qty, 10);
+
+    function refresh() {
+      val.textContent = qty();
+      minus.disabled = qty() === 0;
+      order.disabled = !anySelected();
+    }
+    function anySelected() {
+      for (const r of rows) if (parseInt(r.dataset.qty, 10) > 0) return true;
+      return false;
+    }
+
+    plus.addEventListener("click", () => { row.dataset.qty = String(qty() + 1); refresh(); });
+    minus.addEventListener("click", () => { if (qty() > 0) { row.dataset.qty = String(qty() - 1); refresh(); } });
+
+    order.addEventListener("click", () => {
+      const lines = [];
+      let total = 0;
+      let hasTotal = true;
+      rows.forEach((r) => {
+        const q = parseInt(r.dataset.qty, 10);
+        if (q <= 0) return;
+        const nameEl = r.querySelector("h3, h4");
+        const priceEl = r.querySelector(".bk-item-price");
+        const name = nameEl ? nameEl.textContent.replace(/\s+/g, " ").trim() : "Item";
+        const price = priceEl ? priceEl.textContent.replace(/\s+/g, " ").trim() : "";
+        let line = "- " + q + "x " + name;
+        if (price) line += " (" + price + ")";
+        lines.push(line);
+        const m = price.match(/Rs\s*([\d,]+)/);
+        if (m) total += parseInt(m[1].replace(/,/g, ""), 10) * q;
+        else hasTotal = false;
+      });
+      if (!lines.length) return;
+      let msg = "Hi Orchard Table, I would like to order:\n" + lines.join("\n");
+      if (hasTotal) msg += "\n\nTotal: Rs " + total.toLocaleString("en-IN");
+      window.open("https://wa.me/" + OWNER_WA + "?text=" + encodeURIComponent(msg), "_blank");
+      rows.forEach((r) => {
+        r.dataset.qty = "0";
+        const v = sel(r, ".qty-val");
+        const mn = sel(r, ".qty-minus");
+        const ob = sel(r, ".order-btn");
+        if (v) v.textContent = "0";
+        if (mn) mn.disabled = true;
+        if (ob) ob.disabled = true;
+      });
+    });
+
+    refresh();
+  });
+})();
+
 /* ---------- Lightbox ---------- */
 let lightboxImages = [];
 let lightboxIndex = 0;

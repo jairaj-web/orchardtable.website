@@ -1224,6 +1224,63 @@ select option { background: var(--charcoal); }
   .pf-strip { padding: 16px 18px; }
 }
 
+/* ---------- Order steppers (menu + bakery) ---------- */
+.order-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  align-self: center;
+}
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--gold);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.qty-btn:hover:not(:disabled) { background: var(--gold); color: var(--charcoal); }
+.qty-btn:disabled { opacity: 0.3; cursor: default; }
+.qty-val {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-light);
+  font-variant-numeric: tabular-nums;
+}
+.order-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 9px 15px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-gold);
+  transition: all 0.2s ease;
+}
+.order-btn svg { width: 13px; height: 13px; }
+.order-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.order-btn:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
+@media (max-width: 640px) {
+  .order-box { width: 100%; flex-wrap: wrap; }
+}
+
 /* ---------- Contact page ---------- */
 .contact-layout {
   display: grid;
