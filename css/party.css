@@ -69,7 +69,7 @@
   color: var(--gold);
   margin: 6px 0 18px;
 }
-.party-price-box .card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 14px; }
+.party-price-box .card p { color: var(--text-dark); font-size: 1rem; margin-bottom: 14px; }
 
 /* How it works */
 .party-steps {
@@ -157,5 +157,16 @@
 @media (max-width: 768px) {
   .party-gallery { grid-template-columns: 1fr; }
   .party-gallery img { aspect-ratio: 4/3; }
+  .party-hero { padding: 76px 0 64px; }
+}
+
+/* ---------- Mobile (<560px) ---------- */
+@media (max-width: 560px) {
+  .party-hero { padding: 64px 0 56px; }
+  .party-cta-row { flex-direction: column; align-items: stretch; }
+  .party-cta-row .btn { justify-content: center; width: 100%; }
+  .party-step { padding: 30px 20px 22px; }
+  .party-ig-badge { padding: 12px 20px; font-size: 0.9rem; }
+  .party-price-box .card { padding: 26px 18px; }
 }
 
