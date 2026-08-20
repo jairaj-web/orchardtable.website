@@ -210,13 +210,13 @@ h1, h2, h3, h4 {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 68vh;
+  min-height: 68svh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px 24px;
+  padding: 90px 24px;
   overflow: hidden;
 }
 .hero-bg {
@@ -1533,7 +1533,7 @@ body.nav-open { overflow: hidden; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { justify-content: center; text-align: center; }
   .brand-tag { display: none; }
-  .hero { min-height: 92svh; min-height: 92vh; }
+  .hero { min-height: 72svh; min-height: 72vh; }
   .about-img img { height: 300px; }
   .lightbox-arrow { padding: 10px 14px; font-size: 1rem; }
   .map-frame iframe { height: 300px; }
