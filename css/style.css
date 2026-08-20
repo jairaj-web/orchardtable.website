@@ -104,9 +104,21 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, rgba(30, 58, 43, 0.88), rgba(18, 18, 18, 0.92));
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(14, 29, 21, 0.72);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(212, 175, 55, 0.1);
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.7), transparent);
+  pointer-events: none;
 }
 
 .nav-wrap {
@@ -148,30 +160,41 @@ h1, h2, h3, h4 {
   color: var(--text-light);
   font-weight: 500;
   font-size: 0.92rem;
-  padding: 9px 13px;
+  padding: 9px 16px;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  border-radius: 8px;
-  transition: background 0.25s ease, color 0.25s ease;
+  border-radius: 50px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   white-space: nowrap;
 }
-.nav-links a:hover { color: var(--gold); background: var(--gold-soft); }
+.nav-links a:hover { color: var(--gold); background: var(--gold-soft); transform: translateY(-1px); }
 .nav-links a.active { color: var(--charcoal); background: var(--gold); font-weight: 600; }
-.nav-cta { background: var(--gold); color: var(--charcoal) !important; font-weight: 600; }
-.nav-cta:hover { background: #e6c24a !important; }
+.nav-cta {
+  background: linear-gradient(135deg, #e6c24a, var(--gold) 55%, #b8891c);
+  color: var(--charcoal) !important;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+}
+.nav-cta:hover {
+  background: linear-gradient(135deg, #f0d267, #e6c24a 55%, #c99a28);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.55);
+}
 
 .nav-toggle {
   display: none;
-  background: none;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(212, 175, 55, 0.4);
-  border-radius: 8px;
+  border-radius: 50px;
   color: var(--gold);
   font-size: 1.3rem;
-  padding: 8px 12px;
+  padding: 8px 14px;
   cursor: pointer;
   line-height: 1;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
+.nav-toggle:hover { background: rgba(212, 175, 55, 0.12); box-shadow: 0 0 16px rgba(212, 175, 55, 0.3); }
 
 /* ---------- Hero ---------- */
 .hero {
