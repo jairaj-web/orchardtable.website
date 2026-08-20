@@ -1649,6 +1649,22 @@ body.modal-open { overflow: hidden; }
 }
 .btn-block { width: 100%; margin-top: 6px; }
 .modal-note { font-size: 0.8rem; color: var(--text-dark-muted); margin-top: 14px; }
+.modal-phone { margin-top: 8px; }
+.modal-phone a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--forest);
+  padding: 10px 18px;
+  border: 1px solid rgba(30, 58, 43, 0.2);
+  border-radius: 50px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.modal-phone a:hover { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2); }
+.modal-phone svg { width: 16px; height: 16px; color: var(--gold); }
 .modal-success p { font-size: 0.95rem; color: var(--text-dark); margin: 8px 0; }
 .modal-success-sub { font-size: 0.85rem !important; color: var(--text-dark-muted) !important; }
 .modal-success a { color: var(--forest); font-weight: 600; text-decoration: underline; }
