@@ -1470,6 +1470,8 @@ input:focus, select:focus, textarea:focus {
   * { animation: none !important; transition: none !important; }
 }
 
+.nav-links > li.nav-close-wrap { display: contents; }
+
 /* ---------- Responsive ---------- */
 .nav-close {
   display: none;
