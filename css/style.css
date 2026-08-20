@@ -1427,6 +1427,7 @@ input:focus, select:focus, textarea:focus {
 
 /* ---------- Premium cream panels (cream accents on dark) ---------- */
 .card.panel-cream,
+.review-card.panel-cream,
 .pf-strip.panel-cream,
 .philosophy-note.panel-cream {
   background: linear-gradient(180deg, #fff 0%, var(--cream) 55%, #f1e8d4 100%);
