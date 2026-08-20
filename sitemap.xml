@@ -12,8 +12,12 @@
     <loc>https://orchardtable.website/bakery/</loc>
     <priority>0.8</priority>
   </url>
-  <url>
+<url>
     <loc>https://orchardtable.website/farm/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://orchardtable.website/private-party/</loc>
     <priority>0.8</priority>
   </url>
   <url>
