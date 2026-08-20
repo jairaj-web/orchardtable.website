@@ -93,7 +93,20 @@ document.querySelectorAll(".menu-filter-bar").forEach((bar) => {
       '<button class="qty-btn qty-minus" type="button" aria-label="Decrease quantity">&#8722;</button>' +
       '<span class="qty-val">0</span>' +
       '<button class="qty-btn qty-plus" type="button" aria-label="Increase quantity">+</button>';
-    row.appendChild(box);
+
+    const priceEl = sel(row, ".bk-item-price");
+    if (priceEl) {
+      let right = sel(row, ".bk-item-right");
+      if (!right) {
+        right = document.createElement("div");
+        right.className = "bk-item-right";
+        priceEl.parentNode.insertBefore(right, priceEl);
+        right.appendChild(priceEl);
+      }
+      right.appendChild(box);
+    } else {
+      row.appendChild(box);
+    }
 
     const val = sel(box, ".qty-val");
     const minus = sel(box, ".qty-minus");

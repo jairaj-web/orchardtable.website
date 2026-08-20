@@ -166,6 +166,14 @@
   letter-spacing: 0.4px;
   white-space: nowrap;
 }
+.bk-item-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.bk-item-info { flex: 1 1 auto; min-width: 0; }
 
 /* ---------- Order CTA: floating wheat + pulsing gold glow ---------- */
 .bk-order-wrap { position: relative; overflow: hidden; }
@@ -211,6 +219,8 @@
   .bk-tab-btn { min-height: 44px; padding: 8px 15px; font-size: 0.78rem; }
   .bk-item { flex-direction: column; align-items: flex-start; gap: 8px; }
   .bk-item-price { align-self: flex-end; }
+  .bk-item-right { align-self: flex-end; flex-wrap: wrap; justify-content: flex-end; }
+  .bk-item-info { width: 100%; }
 }
 
 /* ---------- Reduced motion ---------- */
