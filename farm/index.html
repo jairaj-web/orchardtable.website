@@ -131,7 +131,7 @@
         </div>
 
 <div style="text-align:center;margin-top:44px;">
-          <a href="../reserve/" class="btn btn-gold">Book a Class</a>
+          <a href="#" role="button" class="btn btn-gold" onclick="openClassModal(); return false;">Book a Class</a>
           <a href="../private-party/" class="btn btn-outline" style="margin-left:10px;">Host a Private Party</a>
         </div>
       </div>
@@ -202,6 +202,35 @@
         </div>
     </div>
   </footer>
+
+  <!-- ===== Book a Class modal ===== -->
+  <div id="class-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="class-modal-title">
+      <button class="modal-close" aria-label="Close" onclick="closeClassModal()">&times;</button>
+      <h3 id="class-modal-title" class="modal-title">Book a Class</h3>
+      <p class="modal-sub">Private cooking class at Orchard Table</p>
+      <form id="class-form" novalidate onsubmit="submitClassBooking(event)">
+        <label class="field">
+          <span>Name <em>*</em></span>
+          <input type="text" id="cb-name" placeholder="Your name" autocomplete="name" />
+        </label>
+        <label class="field">
+          <span>Mobile No <em>*</em></span>
+          <input type="tel" id="cb-mobile" placeholder="10-digit mobile number" autocomplete="tel" />
+        </label>
+        <label class="field">
+          <span>Email <em class="opt">(optional)</em></span>
+          <input type="email" id="cb-email" placeholder="you@example.com" autocomplete="email" />
+        </label>
+        <button type="submit" class="btn btn-gold btn-block">Request Booking on WhatsApp</button>
+      </form>
+      <div id="class-success" class="modal-success" hidden>
+        <p>Request sent! WhatsApp should have opened with your details.</p>
+        <p class="modal-success-sub">We&rsquo;ll confirm your class shortly. Didn&rsquo;t open? <a href="https://wa.me/916366466599" target="_blank" rel="noopener">Click here</a>.</p>
+      </div>
+      <p class="modal-note">Your details go straight to our WhatsApp.</p>
+    </div>
+  </div>
 
   <script src="../js/main.js" defer></script>
 </body>

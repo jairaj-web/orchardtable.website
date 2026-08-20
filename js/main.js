@@ -233,3 +233,72 @@ document.addEventListener("DOMContentLoaded", () => {
   d.value = localToday;
   d.min = localToday;
 });
+
+/* ---------- Book a Class modal ---------- */
+function openClassModal() {
+  const modal = document.getElementById("class-modal");
+  if (!modal) return;
+  const form = document.getElementById("class-form");
+  const success = document.getElementById("class-success");
+  if (form) form.hidden = false;
+  if (success) success.hidden = true;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  const name = document.getElementById("cb-name");
+  if (name) setTimeout(() => name.focus(), 100);
+}
+
+function closeClassModal() {
+  const modal = document.getElementById("class-modal");
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+function submitClassBooking(e) {
+  e.preventDefault();
+  const name = document.getElementById("cb-name");
+  const mobile = document.getElementById("cb-mobile");
+  const email = document.getElementById("cb-email");
+  if (!name || !name.value.trim()) {
+    alert("Please enter your name.");
+    name.focus();
+    return;
+  }
+  const digits = mobile.value.replace(/[^\d]/g, "");
+  if (digits.length < 10) {
+    alert("Please enter a valid 10-digit mobile number.");
+    mobile.focus();
+    return;
+  }
+  const emailVal = email.value.trim();
+  if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+    alert("Please enter a valid email or leave it blank.");
+    email.focus();
+    return;
+  }
+  const lines = [
+    "*New Cooking Class Booking*",
+    `*Name:* ${name.value.trim()}`,
+    `*Mobile:* ${mobile.value.trim()}`,
+  ];
+  if (emailVal) lines.push(`*Email:* ${emailVal}`);
+  const text = encodeURIComponent(lines.join("\n"));
+  window.open(`https://wa.me/${OWNER_WA}?text=${text}`, "_blank");
+  const form = document.getElementById("class-form");
+  const success = document.getElementById("class-success");
+  if (form) form.hidden = true;
+  if (success) success.hidden = false;
+  showToast("Opening WhatsApp with your booking details...");
+}
+
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("class-modal");
+  if (!modal || !modal.classList.contains("open")) return;
+  if (e.target === modal) closeClassModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeClassModal();
+});
