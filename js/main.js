@@ -66,6 +66,7 @@ document.querySelectorAll(".menu-filter-bar").forEach((bar) => {
 
 /* ---------- Order steppers (menu + bakery pages) ---------- */
 (function initOrderSteppers() {
+  if (document.querySelector(".menu-filter-bar")) return;
   const rows = document.querySelectorAll(".dish-row, .bk-item");
   if (!rows.length) return;
 
