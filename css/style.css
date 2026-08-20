@@ -1359,11 +1359,11 @@ select option { background: var(--charcoal); }
 .feature-card,
 .spot-card,
 .contact-card {
-  background: rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(250, 246, 239, 0.10), rgba(250, 246, 239, 0.04));
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  border-color: rgba(212, 175, 55, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-color: rgba(212, 175, 55, 0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(250, 246, 239, 0.14);
 }
 
 .page-section--cream .card,
@@ -1423,6 +1423,44 @@ input:focus, select:focus, textarea:focus {
   border: 1px solid rgba(212, 175, 55, 0.4);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
+}
+
+/* ---------- Premium cream panels (cream accents on dark) ---------- */
+.card.panel-cream,
+.pf-strip.panel-cream,
+.philosophy-note.panel-cream {
+  background: linear-gradient(180deg, #fff 0%, var(--cream) 55%, #f1e8d4 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 30px rgba(212, 175, 55, 0.1);
+  color: var(--text-dark);
+}
+.panel-cream p,
+.panel-cream li,
+.panel-cream .review-text,
+.panel-cream .review-google,
+.panel-cream .pf-inc,
+.panel-cream .pf-per {
+  color: var(--text-dark);
+}
+.panel-cream h3,
+.panel-cream .review-name,
+.panel-cream .philosophy-note strong,
+.panel-cream .pf-price {
+  color: var(--forest);
+}
+.panel-cream .review-meta,
+.panel-cream .hint-note {
+  color: var(--text-dark-muted);
+}
+.panel-cream .review-who {
+  border-top-color: rgba(30, 58, 43, 0.15);
+}
+.panel-cream .review-google { color: var(--text-dark-muted); }
+.panel-cream .review-google svg { color: var(--gold); }
+.philosophy-note.panel-cream { padding: 30px 34px; border-radius: var(--radius); }
+.panel-cream:hover {
+  border-color: var(--gold);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32), 0 0 34px rgba(212, 175, 55, 0.18);
 }
 
 /* ---------- Reduced motion ---------- */
